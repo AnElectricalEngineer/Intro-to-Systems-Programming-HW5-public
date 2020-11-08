@@ -1,0 +1,7 @@
+#!/bin/bash
+# script name: change_extensions
+# Description: changes file extensions, Parameters: 1st parameter: extension to change, 2nd parameter: extension to change to
+for file in *."$1"
+do
+  mv "$file" "${file%."$1"}."$2""
+done
